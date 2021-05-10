@@ -10,52 +10,7 @@ class Test extends Component {
 
         }
     }
-    // createUI = () => {
-    //     return this.state.inputrows.map((element, i) => (
-    //         <div key={i} className="row-container">
-    //             <div className="input-container">
-    //                 <label>Session Name </label>
-    //                 <input
-    //                     name="Session Name"
-    //                     type="text"
-    //                     value={element.row || ""}
-    //                     onChange={this.handleChange.bind(this, i)}
-    //                     className="inputbox"
-    //                 />
-    //             </div>
-    //             <div className="input-container">
-    //                 <label>Acronym </label>
-    //                 <input
-    //                     name="Acronym"
-    //                     type="text"
-    //                     value={element.row || ""}
-    //                     onChange={this.handleChange.bind(this, i)}
-    //                     className="inputbox"
-    //                 />
-    //             </div>
-    //             <div className="input-container">
-    //                 <label>From </label>
-    //                 <input
-    //                     name="From"
-    //                     type="text"
-    //                     value={element.row || ""}
-    //                     onChange={this.handleChange.bind(this, i)}
-    //                     className="inputbox"
-    //                 />
-    //             </div>
-    //             <div className="input-container">
-    //                 <label>To </label>
-    //                 <input
-    //                     name="To"
-    //                     type="text"
-    //                     value={element.row || ""}
-    //                     onChange={this.handleChange.bind(this, i)}
-    //                     className="inputbox"
-    //                 />
-    //             </div>
-    //         </div>
-    //     ))
-    // }
+   
     handleChange(i, event) {
         let values = [...this.state.inputrows];
         values[i].value = event.target.value;
