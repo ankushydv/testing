@@ -11,6 +11,7 @@ class Test extends Component {
         }
     }
   
+   
     handleChange(i, event) {
         let values = [...this.state.inputrows];
         values[i].value = event.target.value;
