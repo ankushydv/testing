@@ -23,6 +23,17 @@ class Test extends Component {
             inputrows: [...prevState.inputrows, {row:null}]
         }))
     }
+
+    delete(i){
+        console.log("click ")
+        let inputbox= [...this.state.inputrows]
+        inputbox.splice(i,1)
+        console.log(inputbox)
+        this.setState({
+            inputrows:inputbox
+        })
+       
+    }
     render() {
         return (
             <div className="main">
@@ -35,7 +46,7 @@ class Test extends Component {
                             <input
                                 name="Session Name"
                                 type="text"
-                                value={element.row || ""}
+                                // value={element.row || ""}
                                 onChange={this.handleChange.bind(this, i)}
                                 className="inputbox"
                             />
@@ -70,7 +81,7 @@ class Test extends Component {
                                 className="inputbox"
                             />
                         </div>
-                        <FontAwesomeIcon icon={faTrashAlt} className="icons"/>
+                        <FontAwesomeIcon icon={faTrashAlt} onClick={()=> this.delete(i)} className="icons"/>
                         </div>
                        <hr className="line"></hr>
                     </div>
